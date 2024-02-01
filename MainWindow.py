@@ -14,10 +14,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.init_UI()
 
     def init_UI(self):
-        self.ll = list(map(float, input().split()))
-        self.scale = float(input())
         self.MIN_SCALE = 0.0005
-        self.MAX_SCALE = 0.1
+        self.MAX_SCALE = 10
+
+        self.ll = list(map(float, input().split()))
+        self.set_scale(float(input()))
 
         self.update_map()
 
